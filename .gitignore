@@ -15,5 +15,15 @@
 !/home/worker/.tmux/tmux-powerline/themes/
 /home/worker/.tmux/tmux-powerline/themes/*
 !/home/worker/.tmux/tmux-powerline/themes/default.sh
+!/usr/
+/usr/*
+!/usr/share/
+/usr/share/*
+!/usr/share/vim/
+/usr/share/vim/*
+!/usr/share/vim/vim82/
+/usr/share/vim/vim82/*
+!/usr/share/vim/vim82/colors/
+/usr/share/vim/vim82/colors/*
 !/usr/share/vim/vim82/colors/oceandeep.vim
 !.gitignore
