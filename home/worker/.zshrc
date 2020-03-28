@@ -63,6 +63,7 @@ alias degfw=export\ ALL_PROXY=socks5://127.0.0.1:1080
 alias gfw=unset\ ALL_PROXY
 alias sudoedit=EDITOR=vim\ sudoedit
 alias gitp=git\ push\ -u\ origin\ master
+alias sugitp=sudo\ git\ push\ -u\ origin\ master
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	exec tmux
