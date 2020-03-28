@@ -26,4 +26,4 @@
 !/usr/share/vim/vim82/colors/
 /usr/share/vim/vim82/colors/*
 !/usr/share/vim/vim82/colors/oceandeep.vim
-!.gitignore
+!/.gitignore
