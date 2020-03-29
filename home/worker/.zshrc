@@ -64,6 +64,7 @@ alias gfw=unset\ ALL_PROXY
 alias sudoedit=EDITOR=vim\ sudoedit
 alias gitp=git\ push\ -u\ origin\ master
 alias sugitp=sudo\ git\ push\ -u\ origin\ master
+alias gitr=git\ rm\ -r\ --cached
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	exec tmux
