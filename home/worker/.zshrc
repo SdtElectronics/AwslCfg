@@ -52,8 +52,9 @@ powerline-daemon -q
 
 . /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 
-cd ~
+#cd ~
 
+export LIBGL_ALWAYS_INDIRECT=1
 export DISPLAY=:0
 
 PATH=$PATH:~/bin
@@ -65,9 +66,10 @@ alias sudoedit=EDITOR=vim\ sudoedit
 alias gitp=git\ push\ -u\ origin\ master
 alias sugitp=sudo\ git\ push\ -u\ origin\ master
 alias gitr=git\ rm\ -r\ --cached
+alias pubp=http_proxy="socks5://127.0.0.1:1080"\ https_proxy="socks5://127.0.0.1:1080"\ pub\ publish
+alias ppwd="export PATH=$PATH:$pwd"
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	exec tmux
 fi
-
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

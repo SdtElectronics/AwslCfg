@@ -126,7 +126,7 @@ endfunc
 
 func Sppm(fn)
 	call setline(line('$') + 1,"i")
-	call timer_start(200, { tid -> execute(a:fn)})
+	call timer_start(300, { tid -> execute(a:fn)})
 endfunc
 
 func Spm()
@@ -134,11 +134,11 @@ func Spm()
 	wincmd j
 	bd!
 	resize +3
-	vert ter root
+	vert ter zsh -c "root; zsh"
 	wincmd x
 	call cursor(line('$'),0)
 	call feedkeys("dd")
-	call timer_start(200, { tid -> execute('call feedkeys("i")')})
+	call timer_start(300, { tid -> execute('call feedkeys("i")')})
 endfunc
 
 func Tpm()
@@ -152,14 +152,14 @@ func Tpm()
 	wincmd k
 	call cursor(line('$'),0)
 	call feedkeys("dd")
-	call timer_start(200, { tid -> execute('call feedkeys("i")')})
+	call timer_start(300, { tid -> execute('call feedkeys("i")')})
 endfunc
 
 map <S-t> :call Sppm('call Spm()')<CR>
 map <S-d> :call Sppm('call Tpm()')<CR>
 map <S-y> :call Strt()<CR><CR>
 
-map <C-N> :tabnew<CR>:NERDTree<CR>:vertical resize -5<CR>:wincmd l<CR>:bel terminal<CR><C-w><S-n>:resize 7 <CR><S-i><C-w><C-k>
+map <C-N> :tabnew<CR>:NERDTree<CR>:vertical resize -5<CR>:wincmd l<CR>:bel ter<CR><C-w><S-n>:resize 7 <CR><S-i><C-w><C-k>
 
 "map <C-X> :windo bd!<CR><C-w><S-n>:tabclose!<CR>
 
